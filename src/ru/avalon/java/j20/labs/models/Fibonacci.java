@@ -45,7 +45,7 @@ public class Fibonacci implements Iterable<Integer> {
         private int counter2 = 0;
         @Override
         public boolean hasNext() {
-            return counter2 < NumbersFibonacci.size();
+            return counter2 < NumbersFibonacci.size() - 1;
         }
 
         /**
@@ -56,7 +56,8 @@ public class Fibonacci implements Iterable<Integer> {
          */
         @Override
         public Integer next() {
-            return NumbersFibonacci.get(counter2+1);
+            counter2 = counter2 + 1;
+            return NumbersFibonacci.get(counter2);
         }
     }
 

@@ -25,10 +25,16 @@ public class Task1 implements Task {
     @Override
     public void run() {
         int[] array = arrayFactory.getInstance(20);
+        Integer[] intArray = {10, 20, 30, 40};
+        Double[] dArray = {10.10, 20.20, 30.30};
         // int[] array = {2, 4};
-        int min = Numbers.min(array);
-        int max = Numbers.max(array);
-        double avg = Numbers.avg(array);
+        int min = Numbers.min(intArray);
+        int max = Numbers.max(intArray);
+        double avg = Numbers.avg(intArray);
+        
+        double dMin = Numbers.min(dArray);
+        double dMax = Numbers.max(dArray);
+        double dAvg = Numbers.avg(dArray);
         /*
          * TODO(Студент): Выполните задание №1
          *

@@ -27,10 +27,15 @@ public class Task5 implements Task {
     @Override
     public void run() {
         final int[] array = arrayFactory.getInstance(20);
+       
+        
         //int[] array = {2, 4, 6};
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(array));   //список
+        ArrayList<Integer> list = new ArrayList<>();  
+        for (int value: array) {
+            list.add(value);
+        }
 
-        HashSet<Integer> set = new HashSet<>(Arrays.asList(array));     //набор
+        HashSet<Integer> set = new HashSet<>(list);     
 
         /**
          * TODO(Студент): Выполните задание №5
